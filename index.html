@@ -416,10 +416,16 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-    var flipbook = document.querySelector('.flipbook-container');
-    if (flipbook) {
-        flipbook.classList.remove('double-page-view');
-        flipbook.classList.add('single-page-view');
+    // Assuming the viewer has a method to set single page view
+    if (typeof flipbookcfg !== 'undefined' && typeof flipbookcfg.viewer !== 'undefined') {
+        var viewer = flipbookcfg.viewer;
+        if (viewer === 'magazine') {
+            // Custom code to force single page view
+            var flipbookElement = document.querySelector('.flipbook-container');
+            if (flipbookElement) {
+                flipbookElement.classList.add('single-page-view');
+            }
+        }
     }
 });
 
