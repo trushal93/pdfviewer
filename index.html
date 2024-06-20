@@ -34,6 +34,8 @@
     
     const urlParams = new URLSearchParams(window.location.search);
     const count = urlParams.get('count');
+    let screenWidth = window.screen.width;
+
     var flipbookcfg={
         "id": "8b8db28325a60e03064335b8f694d9c40c638fcc7",
         "app_name": "metadata-app-name",
@@ -41,7 +43,7 @@
         "name": "flipbook.pdf",
         "mode": "PDF",
         "isize": 1.55229,
-        "width": 648,
+        "width": screenWidth,
         "height": 1152,
         "size": "175211",
         "admin_key": "",
