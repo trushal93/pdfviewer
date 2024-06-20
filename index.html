@@ -31,7 +31,11 @@
     
 <script type="text/javascript">
     /*start-metadata*/
-    
+    function isTablet() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            return (/(ipad|android(?!.*mobile)|tablet|playbook|silk)/.test(userAgent) || (window.innerWidth >= 768 && window.innerWidth <= 1024));
+        }
+
     const urlParams = new URLSearchParams(window.location.search);
     const count = urlParams.get('count');
     let screenWidth = window.screen.width;
@@ -44,8 +48,8 @@
         "name": "flipbook.pdf",
         "mode": "PDF",
         "isize": 1.55229,
-        "width": screenHeight,
-        "height": screenWidth,
+        "width":isTablet()? screenHeight:screenWidth,
+        "height": isTablet()?screenWidth:screenHeight,
         "size": "175211",
         "admin_key": "",
         "url": "index.html",
