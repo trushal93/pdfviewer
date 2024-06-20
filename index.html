@@ -414,6 +414,15 @@
                 }
             });            
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+    var flipbook = document.querySelector('.flipbook-container');
+    if (flipbook) {
+        flipbook.classList.remove('double-page-view');
+        flipbook.classList.add('single-page-view');
+    }
+});
+
     </script> 
     
  
@@ -512,4 +521,11 @@
       div.grammarly-desktop-integration:before {
         content: attr(data-content);
       }
+  .flipbook-container .double-page-view {
+    display: none !important;
+  }
+  .flipbook-container .single-page-view {
+    display: block !important;
+  }
+
     </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div></template></grammarly-desktop-integration></html>
