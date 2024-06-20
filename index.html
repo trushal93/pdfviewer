@@ -35,6 +35,7 @@
     const urlParams = new URLSearchParams(window.location.search);
     const count = urlParams.get('count');
     let screenWidth = window.screen.width;
+    let screenHeight = window.screen.height;
 
     var flipbookcfg={
         "id": "8b8db28325a60e03064335b8f694d9c40c638fcc7",
@@ -44,7 +45,7 @@
         "mode": "PDF",
         "isize": 1.55229,
         "width": screenWidth,
-        "height": 1152,
+        "height": screenHeight,
         "size": "175211",
         "admin_key": "",
         "url": "index.html",
@@ -77,12 +78,12 @@
             "show_round": 0,
             "show_binding": 0,
             "show_center": 1,
-            "show_double": 0,
+            "show_double": 2,
             "show_zoom": 1,
             "show_share": 0,
             "show_search": 0,
             "show_thumbpanel": 0,
-            "show_outline": 1,
+            "show_outline": 0,
             "show_bookmarks": 0,            
             "start_page": null,
             "end_page": null,
